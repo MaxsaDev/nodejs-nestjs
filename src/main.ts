@@ -3,6 +3,16 @@
 //npm install --save @nestjs/sequelize sequelize sequelize-typescript
 //npm install --save pg pg-hstore
 //npm install --save-dev @types/sequelize
+//npm i @nestjs/config
+//npm i cross-env
+//
+//nest generate module users
+//nest generate controller users
+//nest generate service users
+
+
+
+
 import { NestFactory } from "@nestjs/core";
 import {AppModule} from "./app.module";
 
