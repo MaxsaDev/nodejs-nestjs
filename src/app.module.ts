@@ -2,7 +2,10 @@ import {Module} from "@nestjs/common";
 import {SequelizeModule} from "@nestjs/sequelize";
 import { UsersModule } from './users/users.module';
 import {ConfigModule} from "@nestjs/config";
+import { RoleModule } from './role/role.module';
 import {User} from "./users/users.model";
+import {Role} from "./role/roles.model";
+import {UserRoles} from "./user-roles/user-roles.model";
 
 @Module({
     controllers: [],
@@ -18,10 +21,11 @@ import {User} from "./users/users.model";
             username: process.env.POSTGRES_USER,
             password: process.env.POSTGRES_PASSWORD,
             database: process.env.POSTGRES_DB,
-            models: [User],
+            models: [User, Role, UserRoles],
             autoLoadModels: true, //щоб Sequelize створював таблиці на підставі моделей в програмі
         }),
         UsersModule,
+        RoleModule,
     ],
 })
 export class AppModule {
