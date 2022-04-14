@@ -5,8 +5,11 @@
 //npm install --save-dev @types/sequelize
 //npm i @nestjs/config
 //npm i cross-env
+//npm i @nestjs/jwt bcryptjs
 //
 //npm i @nestjs/swagger swagger-ui-express
+//
+//
 //
 //nest generate module users
 //nest generate controller users
@@ -15,7 +18,10 @@
 //nest generate module role
 //nest generate controller role
 //nest generate service role
-
+//
+//nest generate module auth
+//nest generate controller auth
+//nest generate service auth
 
 
 
