@@ -9,13 +9,13 @@ export class UserRoles extends Model<UserRoles>{
     @Column({type: DataType.INTEGER, unique: true, autoIncrement: true, primaryKey: true})
     id: number;
 
-    @ApiProperty({example: '123', description: 'ID корисувача'})
-    @ForeignKey(() => Role)
+    @ApiProperty({example: '123', description: 'ID користувача'})
+    @ForeignKey(() => User)
     @Column({type: DataType.INTEGER, allowNull: false})
     userId: number;
 
     @ApiProperty({example: '123', description: 'ID ролі користувача'})
-    @ForeignKey(() => User)
+    @ForeignKey(() => Role)
     @Column({type: DataType.INTEGER, allowNull: false})
     roleId: number;
 
