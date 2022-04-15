@@ -7,12 +7,13 @@ import {Role} from '../role/roles.model';
 import {UserRoles} from '../user-roles/user-roles.model';
 import {RoleModule} from '../role/role.module';
 import {AuthModule} from "../auth/auth.module";
+import {Post} from "../posts/posts.model";
 
 @Module({
     controllers: [UsersController],
     providers: [UsersService],
     imports: [
-        SequelizeModule.forFeature([User, Role, UserRoles]),
+        SequelizeModule.forFeature([User, Role, UserRoles, Post]),
         RoleModule,
         //forwardRef - запобігає помилці зациклювання imports/exports
         forwardRef(() => AuthModule)
